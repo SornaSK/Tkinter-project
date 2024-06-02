@@ -1,0 +1,170 @@
+from tkinter import *
+from tkinter import messagebox
+root=Tk()
+root.title("Billing")
+def calculate():
+    dic = {'cheese_burger':[e1,150],
+           'cheese_sandwich':[e2,80],
+           'burrito':[e3,100],
+           'chicken_burger':[e4,120],
+           'spicy_chicken':[e5,150],
+           'icecream':[e6,70],
+           'french_fries':[e7,100],
+           'chicken_nugget':[e8,60],
+           'cheese_cake':[e9,50],
+           'milkshake':[e10,70],
+           'ice_tea':[e11,30],
+           'lemon_tea':[e12,50],
+           'orange_juice':[e13,80],}
+    total = 0
+    for key,val in dic.items():
+        if val[0].get()!="":
+            total += int(val[0].get())*val[1]
+    l1=Label(f2,text="TOTAL AMOUNT : "+str(total),padx='50',bg="#808080",fg="white",font=font_style)
+    l1.place(x=380,y=660)
+    l1.after(1000,l1.destroy)
+    f2.after(1000,calculate)
+        
+font_style = ("Helvetica", 14, "bold")
+f1=Frame(root,width=300,height=750,bg="#808080")
+f1.pack(side=LEFT)
+l1=Label(f1,text="MENU",bg="#808080",fg="white",font=font_style)
+l1.place(x=120,y=50)
+l1=Label(f1,text="MAIN COURSE",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=100)
+l1=Label(f1,text="Cheese Burger",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=140)
+l1=Label(f1,text="150",bg="#808080",fg="white",font=font_style)
+l1.place(x=210,y=140)
+l1=Label(f1,text="Cheese Sandwich",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=170)
+l1=Label(f1,text="80",bg="#808080",fg="white",font=font_style)
+l1.place(x=220,y=170)
+l1=Label(f1,text="Burrito",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=200)
+l1=Label(f1,text="100",bg="#808080",fg="white",font=font_style)
+l1.place(x=210,y=200)
+l1=Label(f1,text="Chicken Burger",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=230)
+l1=Label(f1,text="120",bg="#808080",fg="white",font=font_style)
+l1.place(x=210,y=230)
+l1=Label(f1,text="Spicy Chicken",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=260)
+l1=Label(f1,text="150",bg="#808080",fg="white",font=font_style)
+l1.place(x=210,y=260)
+
+l1=Label(f1,text="",bg="#808080")
+l1.place(x=20,y=290)
+
+l1=Label(f1,text="APPETIZERS",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=320)
+l1=Label(f1,text="Icecream ",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=360)
+l1=Label(f1,text="70",bg="#808080",fg="white",font=font_style)
+l1.place(x=220,y=360)
+l1=Label(f1,text="French Fries",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=390)
+l1=Label(f1,text="100",bg="#808080",fg="white",font=font_style)
+l1.place(x=210,y=390)
+l1=Label(f1,text="Chicken Nugget",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=420)
+l1=Label(f1,text="50",bg="#808080",fg="white",font=font_style)
+l1.place(x=220,y=420)
+l1=Label(f1,text="Cheese Cake",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=450)
+l1=Label(f1,text="60",bg="#808080",fg="white",font=font_style)
+l1.place(x=220,y=450)
+
+l1=Label(f1,text="",bg="#808080")
+l1.place(x=20,y=470)
+
+l1=Label(f1,text="DRINKS",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=500)
+l1=Label(f1,text="Milkshake",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=540)
+l1=Label(f1,text="70",bg="#808080",fg="white",font=font_style)
+l1.place(x=220,y=540)
+l1=Label(f1,text="Ice Tea",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=570)
+l1=Label(f1,text="30",bg="#808080",fg="white",font=font_style)
+l1.place(x=220,y=570)
+l1=Label(f1,text="Lemon Tea",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=600)
+l1=Label(f1,text="50",bg="#808080",fg="white",font=font_style)
+l1.place(x=220,y=600)
+l1=Label(f1,text="Orange Juice",bg="#808080",fg="white",font=font_style)
+l1.place(x=20,y=630)
+l1=Label(f1,text="80",bg="#808080",fg="white",font=font_style)
+l1.place(x=220,y=630)
+
+
+f2=Frame(root,width=1100,height=750,bg="#B6B6B4")
+f2.pack()
+l1=Label(f2,text="HUNGER HUNT",bg="#B6B6B4",fg="#808080",font=("Palatino", 25,"bold"))
+l1.place(x=410,y=30)
+
+
+
+l1=Label(f2,text="MAIN COURSE",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=250,y=100)
+l1=Label(f2,text="Cheese Burger",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=110,y=160)
+e1=Entry(f2,width='10')
+e1.place(x=350,y=160)
+l1=Label(f2,text="Cheese Sandwich",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=110,y=200)
+e2=Entry(f2,width='10')
+e2.place(x=350,y=200)
+l1=Label(f2,text="Burrito",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=110,y=240)
+e3=Entry(f2,width='10')
+e3.place(x=350,y=240)
+l1=Label(f2,text="Chicken Burger",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=110,y=280)
+e4=Entry(f2,width='10')
+e4.place(x=350,y=280)
+l1=Label(f2,text="Spicy Chicken",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=110,y=320)
+e5=Entry(f2,width='10')
+e5.place(x=350,y=320)
+
+l1=Label(f2,text="APPETIZERS",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=690,y=105)
+l1=Label(f2,text="Icecream ",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=620,y=170)
+e6=Entry(f2,width='10')
+e6.place(x=800,y=170)
+l1=Label(f2,text="French Fries",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=620,y=220)
+e7=Entry(f2,width='10')
+e7.place(x=800,y=220)
+l1=Label(f2,text="Chicken Nugget",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=620,y=270)
+e8=Entry(f2,width='10')
+e8.place(x=800,y=270)
+l1=Label(f2,text="Cheese Cake",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=620,y=320)
+e9=Entry(f2,width='10')
+e9.place(x=800,y=320)
+
+l1=Label(f2,text="DRINKS",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=490,y=380)
+l1=Label(f2,text="Milkshake",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=400,y=430)
+e10=Entry(f2,width='10')
+e10.place(x=570,y=430)
+l1=Label(f2,text="Ice Tea",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=400,y=470)
+e11=Entry(f2,width='10')
+e11.place(x=570,y=470)
+l1=Label(f2,text="Lemon Tea",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=400,y=510)
+e12=Entry(f2,width='10')
+e12.place(x=570,y=510)
+l1=Label(f2,text="Orange Juice",bg="#B6B6B4",fg="white",font=font_style)
+l1.place(x=400,y=550)
+e13=Entry(f2,width='10')
+e13.place(x=570,y=550)
+f2.after(1000,calculate)
+
+root.mainloop()
